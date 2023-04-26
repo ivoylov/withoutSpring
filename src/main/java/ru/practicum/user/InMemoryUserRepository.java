@@ -1,8 +1,11 @@
 package ru.practicum.user;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class InMemoryUserRepository implements UserRepository {
 
     private static List<User> users = new ArrayList<>();
@@ -17,5 +20,5 @@ public class InMemoryUserRepository implements UserRepository {
         users.add(user);
         return user;
     }
-    
+
 }
